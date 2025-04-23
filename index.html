@@ -3,96 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Slide ACI</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html,
-      body {
-        height: 100%;
-        width: 100%;
-        font-family: sans-serif;
-        background: white;
-        overflow: hidden;
-      }
-
-      .slider {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-      }
-
-      .slide {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-        display: flex;
-        z-index: 0;
-      }
-
-      .slide.active {
-        opacity: 1;
-        z-index: 1;
-      }
-
-      .left,
-      .right {
-        width: 50%;
-        height: 100%;
-        padding: 2vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .left {
-        text-align: left;
-        color: black;
-        flex-direction: column;
-      }
-
-      h1 {
-        font-size: 4vw;
-        margin-bottom: 2vw;
-      }
-
-      ul {
-        font-size: 2vw;
-        line-height: 1.5;
-        margin-bottom: 2vw;
-        padding-left: 2vw;
-      }
-
-      .highlight {
-        background-color: #ffe600;
-        padding: 2vw;
-        border-radius: 1vw;
-        margin-bottom: 2vw;
-      }
-
-      .highlight p {
-        font-size: 2.4vw;
-        margin: 0;
-        text-align: center;
-        color: #000;
-      }
-
-      p {
-        font-size: 2.2vw;
-      }
-
-      .right img {
-        max-width: 100%;
-        max-height: 90%;
-        object-fit: contain;
-        border-radius: 2vw;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="slider">
@@ -162,7 +73,10 @@
       <div class="slide">
         <div class="left">
           <div>
-            <h1 style="font-size: 4.8vw">🌍 Polizza Catastrofale (Cat Nat)</h1>
+            <h1>
+              🌍 Polizza Catastrofale <br />
+              (Cat Nat)
+            </h1>
             <ul>
               <li>
                 <strong>✅ Obbligatoria dal 2025</strong> per tutte le imprese
@@ -219,17 +133,42 @@
           <img src="immagini/owny.png" alt="Passaggio di proprietà" />
         </div>
       </div>
+      <div class="slide">
+        <div class="left">
+          <div>
+            <h1>📦 Ritira qui i tuoi ordini Amazon!</h1>
+            <ul>
+              <li><strong>🟡 Amazon Locker attivo in sede</strong></li>
+              <li>
+                <strong>📬 Ritiri quando vuoi</strong>, in autonomia e senza
+                code
+              </li>
+              <li>
+                <strong>🔐 Sicuro, veloce e tracciato</strong> in tempo reale
+              </li>
+            </ul>
+            <div class="highlight" style="background-color: #ffd700">
+              <p>
+                🛍️
+                <strong
+                  >Acquista su Amazon, seleziona il nostro locker e ritira
+                  qui!</strong
+                >
+              </p>
+            </div>
+            <p>
+              📍
+              <strong
+                >Chiedi in reception come funziona: è semplicissimo!</strong
+              >
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <img src="immagini/amazon.png" alt="Amazon Locker" />
+        </div>
+      </div>
     </div>
-
-    <script>
-      const slides = document.querySelectorAll(".slide");
-      let current = 0;
-
-      setInterval(() => {
-        slides[current].classList.remove("active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("active");
-      }, 15000);
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
