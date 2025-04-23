@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slide ACI</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+        background: white;
+        overflow: hidden;
+      }
+
+      .slider {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        display: flex;
+        z-index: 0;
+      }
+
+      .slide.active {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      .left,
+      .right {
+        width: 50%;
+        height: 100%;
+        padding: 2vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .left {
+        text-align: left;
+        color: black;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 4vw;
+        margin-bottom: 2vw;
+      }
+
+      ul {
+        font-size: 2vw;
+        line-height: 1.5;
+        margin-bottom: 2vw;
+        padding-left: 2vw;
+      }
+
+      .highlight {
+        background-color: #ffe600;
+        padding: 2vw;
+        border-radius: 1vw;
+        margin-bottom: 2vw;
+      }
+
+      .highlight p {
+        font-size: 2.4vw;
+        margin: 0;
+        text-align: center;
+        color: #000;
+      }
+
+      p {
+        font-size: 2.2vw;
+      }
+
+      .right img {
+        max-width: 100%;
+        max-height: 90%;
+        object-fit: contain;
+        border-radius: 2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slide active">
+        <div class="left">
+          <div>
+            <h1>🧾 Hai controllato il bollo auto?</h1>
+            <ul>
+              <li>
+                <strong>🔍 Verifica scadenze</strong> in tempo reale: eviti
+                multe e sorprese
+              </li>
+              <li>
+                <strong>📍 Contenziosi con la Regione Veneto?</strong> Ti
+                aiutiamo a risolverli!
+              </li>
+            </ul>
+            <div class="highlight">
+              <p>
+                ✅ <strong>Zero pensieri: gestiamo tutto noi!</strong><br />
+                Controlli, verifiche, pratiche - facciamo tutto in sede.
+              </p>
+            </div>
+            <p>📍 <strong>Parlane con noi, è semplice e immediato.</strong></p>
+          </div>
+        </div>
+        <div class="right">
+          <img src="immagini/bollo.jpg" alt="Bollo auto" />
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="left">
+          <div>
+            <h1>
+              🚗 Rinnovo Patente? <br />
+              Ci pensiamo noi!
+            </h1>
+            <ul>
+              <li>
+                <strong>🔔 Ti avvisiamo noi</strong> quando scade la tua patente
+              </li>
+              <li><strong>📸 Foto in sede</strong> inclusa, zero stress!</li>
+              <li><strong>👨‍⚕️ Medico presente</strong> 3 volte a settimana</li>
+            </ul>
+            <div class="highlight">
+              <p>
+                ✅
+                <strong>Attiviamo SUBITO il servizio di avviso scadenza!</strong
+                ><br />
+                Nessun modulo, nessuna attesa: lo facciamo sul momento.
+              </p>
+            </div>
+            <p>
+              👉 Non aspettare l’ultimo momento:<br />
+              con noi rinnovi in modo
+              <strong>veloce, completo e senza pensieri</strong>.
+            </p>
+            <p>🕘 Prenota subito la tua visita!</p>
+          </div>
+        </div>
+        <div class="right">
+          <img src="immagini/patente.jpg" alt="Rinnovo patente" />
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="left">
+          <div>
+            <h1 style="font-size: 4.8vw">🌍 Polizza Catastrofale (Cat Nat)</h1>
+            <ul>
+              <li>
+                <strong>✅ Obbligatoria dal 2025</strong> per tutte le imprese
+                con sede in Italia
+              </li>
+              <li>
+                <strong>🛡️ Protegge</strong> immobili, impianti e attrezzature
+                da terremoti, alluvioni, frane
+              </li>
+            </ul>
+            <div class="highlight">
+              <p>
+                💡 <strong>Non rischiare blocchi o sanzioni!</strong><br />
+                Chiedi ora informazioni, ti aiutiamo a essere in regola.
+              </p>
+            </div>
+            <p>
+              📍
+              <strong
+                >Parlane con noi in reception. La consulenza è gratuita!</strong
+              >
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <img src="immagini/catnat.jpg" alt="Polizza Catastrofale" />
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="left">
+          <div>
+            <h1>🔒 Passaggio di proprietà sicuro, ci pensiamo noi!</h1>
+            <ul style="line-height: 1.6">
+              <li>
+                ✅ Registriamo compratore e venditore su <strong>Owny</strong>
+              </li>
+              <li>💰 L’acquirente deposita il denaro sul conto protetto</li>
+              <li>
+                🔎 Owny verifica il passaggio tramite <strong>ACI/PRA</strong>
+              </li>
+              <li>🔁 Completato il passaggio, il denaro va al venditore</li>
+            </ul>
+            <div class="highlight" style="margin-top: 2vw">
+              <p>
+                💡 <strong>Transazione sicura, garantita e senza stress.</strong
+                ><br />
+                Parla con noi, ti guidiamo in tutto il processo!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="immagini/owny.png" alt="Passaggio di proprietà" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let current = 0;
+
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 15000);
+    </script>
+  </body>
+</html>
